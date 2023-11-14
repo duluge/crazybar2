@@ -59,7 +59,11 @@ Page({
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
-	onShow: function () { },
+	onShow: function () { 
+		this.setData({
+			'activity.ACTIVITY_OBJ.flow': ['新的流程1', '新的流程2', '新的流程3']
+		})
+	},
 
 	/**
 	 * 生命周期函数--监听页面隐藏
@@ -122,5 +126,5 @@ Page({
 			title: this.data.activity.ACTIVITY_TITLE,
 			imageUrl: this.data.activity.ACTIVITY_OBJ.cover[0]
 		}
-	}
+	},
 })
