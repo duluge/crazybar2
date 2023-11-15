@@ -90,7 +90,7 @@ class BaseProjectService extends BaseService {
 					data.ACTIVITY_TITLE = title + '1';
 					data.ACTIVITY_CATE_ID = cateId;
 					data.ACTIVITY_CATE_NAME = title;
-					data.ACTIVITY_ADDRESS = '湖南省长沙市岳麓山';
+					data.ACTIVITY_ADDRESS = '深圳市南山区海岸城';
 					data.ACTIVITY_START = this._timestamp;
 					data.ACTIVITY_END = this._timestamp + 86400 * 1000 * 30;
 					data.ACTIVITY_STOP = this._timestamp + 86400 * 1000 * 30;

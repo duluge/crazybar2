@@ -92,9 +92,8 @@ Page({
 
 		let sortItems = [];
 		let sortMenus = [
-			{ label: '今日', type: 'today', value: '' },
-			{ label: '明日', type: 'tomorrow', value: '' },
-			{ label: '本月', type: 'month', value: '' },
+			{ label: '个人', type: 'person', value: '' },
+			{ label: '组织', type: 'organization', value: '' },
 			...sortItem1, 
 		];
 		this.setData({

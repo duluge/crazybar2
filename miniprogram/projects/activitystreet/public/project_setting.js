@@ -32,11 +32,11 @@ module.exports = { //activitystreet
 
 	ACTIVITY_NAME: '活动',
 	ACTIVITY_CATE: [
-        { id: 1, title: '文化类' },
-        { id: 2, title: '艺术类' },
-        { id: 3, title: '体育类' },
-        { id: 4, title: '公益类' },
-        { id: 5, title: '其他' },
+        //{ id: 1, title: '文化类' },
+        //{ id: 2, title: '艺术类' },
+		//{ id: 3, title: '体育类' },
+        //{ id: 4, title: '公益类' },
+        //{ id: 5, title: '其他' },
 	],
 	ACTIVITY_FIELDS: [
 		{ mark: 'time', title: '预计时长(小时)', type: 'digit', must: true },

@@ -23,7 +23,7 @@
 
 		<view class="tab-bar-item" bindtap="url" data-type="relaunch" data-url="/projects/activitystreet/pages/enroll/index/enroll_index">
 			<image class="tab-icon" src="/projects/activitystreet/images/tabbar/checkin{{curMenu=='enroll_index'?'_cur':''}}.png"></image>
-			<view class="tab-text {{curMenu=='enroll_index'?'menu-project':''}}">打卡</view>
+			<view class="tab-text {{curMenu=='enroll_index'?'menu-project':''}}">动态</view>
 		</view>
 		 
 	 

@@ -1,7 +1,2 @@
-<import src="../../../../../tpls/project/news_index_tpl.wxml" />
-<template is="newsIndexTpl" data="{{showUp:false,upImg:'',dataList,isLoad,isLoad,_params,search:search||'',listMode:listMode||'leftbig1',isTotalMenu:true,sortMenus,sortItems}}" />
-
-<block wx:if="{{skin.IS_SUB}}">
-	<import src="../../tpls/menu_tpl.wxml" />
-	<template is="menuTpl" data="{{curMenu:'news_cate1',returnHome:false}}" />
-</block>
+<!--projects/activitystreet/pages/news/cate1/news_cate1.wxml-->
+<text>projects/activitystreet/pages/news/cate1/news_cate1.wxml</text>

@@ -84,22 +84,10 @@
                 "selectedIconPath": "/projects/activitystreet/images/tabbar/home_cur.png"
             },
             {
-                "pagePath": "projects/activitystreet/pages/news/index/news_index",
-                "text": "通知",
-                "iconPath": "/projects/activitystreet/images/tabbar/product.png",
-                "selectedIconPath": "/projects/activitystreet/images/tabbar/product_cur.png"
-            },
-            {
                 "pagePath": "projects/activitystreet/pages/activity/index/activity_index",
                 "text": "活动",
                 "iconPath": "/projects/activitystreet/images/tabbar/enroll.png",
                 "selectedIconPath": "/projects/activitystreet/images/tabbar/enroll_cur.png"
-            },
-            {
-                "pagePath": "projects/activitystreet/pages/enroll/index/enroll_index",
-                "text": "打卡",
-                "iconPath": "/projects/activitystreet/images/tabbar/checkin.png",
-                "selectedIconPath": "/projects/activitystreet/images/tabbar/checkin_cur.png"
             },
             {
                 "pagePath": "projects/activitystreet/pages/my/index/my_index",
