@@ -45,11 +45,6 @@
         "projects/activitystreet/pages/admin/activity/edit/admin_activity_edit",
         "projects/activitystreet/pages/comment/list/comment_list",
         "projects/activitystreet/pages/comment/add/comment_add",
-        "projects/activitystreet/pages/enroll/index/enroll_index",
-        "projects/activitystreet/pages/enroll/detail/enroll_detail",
-        "projects/activitystreet/pages/enroll/do/enroll_do",
-        "projects/activitystreet/pages/enroll/my_join_list/enroll_my_join_list",
-        "projects/activitystreet/pages/enroll/my_user_list/enroll_my_user_list",
         "projects/activitystreet/pages/admin/enroll/list/admin_enroll_list",
         "projects/activitystreet/pages/admin/enroll/add/admin_enroll_add",
         "projects/activitystreet/pages/admin/enroll/edit/admin_enroll_edit",
@@ -68,7 +63,7 @@
         "backgroundColor": "#f1f1f1",
         "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#5872CD",
-        "navigationBarTitleText": "街道社区活动小程序",
+        "navigationBarTitleText": "疯吧小程序",
         "navigationBarTextStyle": "white"
     },
     "tabBar": {
@@ -77,12 +72,18 @@
         "color": "#999999",
         "selectedColor": "#5872CD",
         "list": [
-            {
+			{
                 "pagePath": "projects/activitystreet/pages/default/index/default_index",
                 "text": "首页",
                 "iconPath": "/projects/activitystreet/images/tabbar/home.png",
                 "selectedIconPath": "/projects/activitystreet/images/tabbar/home_cur.png"
             },
+			{
+			    "pagePath": "projects/activitystreet/pages/news/index/news_index",
+			    "text": "动态",
+			    "iconPath": "/projects/activitystreet/images/tabbar/checkin.png",
+			    "selectedIconPath": "/projects/activitystreet/images/tabbar/checkin_cur.png"
+			},
             {
                 "pagePath": "projects/activitystreet/pages/activity/index/activity_index",
                 "text": "活动",

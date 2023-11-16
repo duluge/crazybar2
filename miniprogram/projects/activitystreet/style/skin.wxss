@@ -3,7 +3,7 @@ page {
 
 	--projectColor: #5872CD;
 	--projectColorLight: #5872CD;
-	--projectCompareColor: #FA8B14;
+	--projectCompareColor: #1b2440;
 
 	/*#### 父组件日历颜色定义*/
 	/* 整体颜色 */
