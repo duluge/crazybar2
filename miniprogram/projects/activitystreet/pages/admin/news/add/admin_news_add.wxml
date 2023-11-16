@@ -1,4 +1,2 @@
-<view wx:if="{{!isLoad}}" class="margin-top load loading text-l text-grey"></view>
-<view class="main-admin" wx:if="{{isAdmin&&isLoad}}">
-	<include src="../admin_news_form_tpl.wxml" /> 
-</view>
+<!--projects/activitystreet/pages/admin/news/add/admin_news_add.wxml-->
+<text>projects/activitystreet/pages/admin/news/add/admin_news_add.wxml</text>

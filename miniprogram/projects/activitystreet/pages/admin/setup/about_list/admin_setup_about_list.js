@@ -1,7 +1,4 @@
-const AdminBiz = require('../../../../../../comm/biz/admin_biz.js');
-const projectSetting = require('../../../../public/project_setting.js');
-const pageHelper = require('../../../../../../helper/page_helper.js');
-
+// projects/activitystreet/pages/admin/setup/about_list/admin_setup_about_list.js
 Page({
 
 	/**
@@ -15,11 +12,7 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad(options) {
-		if (!AdminBiz.isAdmin(this)) return;
 
-		this.setData({
-			list: projectSetting.SETUP_CONTENT_ITEMS
-		});
 	},
 
 	/**
@@ -64,7 +57,10 @@ Page({
 
 	},
 
-	url: function (e) {
-		pageHelper.url(e, this);
+	/**
+	 * 用户点击右上角分享
+	 */
+	onShareAppMessage() {
+
 	}
 })

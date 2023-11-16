@@ -1,61 +1,66 @@
-const AdminBiz = require('../../../../../../comm/biz/admin_biz.js');
-const pageHelper = require('../../../../../../helper/page_helper.js');  
-
+// projects/activitystreet/pages/admin/index/login/admin_login.js
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		name: '',
-		pwd: '',
+
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
-	onLoad: function (options) {
-		AdminBiz.clearAdminToken();
+	onLoad(options) {
+
 	},
 
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
-	onReady: function () {
+	onReady() {
 
 	},
 
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
-	onShow: function () {},
+	onShow() {
+
+	},
 
 	/**
 	 * 生命周期函数--监听页面隐藏
 	 */
-	onHide: function () {
+	onHide() {
 
 	},
 
 	/**
 	 * 生命周期函数--监听页面卸载
 	 */
-	onUnload: function () {
+	onUnload() {
 
 	},
 
-	url: function (e) {
-		pageHelper.url(e, this);
+	/**
+	 * 页面相关事件处理函数--监听用户下拉动作
+	 */
+	onPullDownRefresh() {
+
 	},
 
-	bindBackTap: function (e) {
-		wx.reLaunch({
-			url: pageHelper.fmtURLByPID('/pages/my/index/my_index'),
-		});
+	/**
+	 * 页面上拉触底事件的处理函数
+	 */
+	onReachBottom() {
+
 	},
 
-	bindLoginTap: async function (e) {
-		return AdminBiz.adminLogin(this, this.data.name, this.data.pwd);
+	/**
+	 * 用户点击右上角分享
+	 */
+	onShareAppMessage() {
+
 	}
-
 })

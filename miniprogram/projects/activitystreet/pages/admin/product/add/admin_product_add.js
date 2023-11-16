@@ -1,12 +1,4 @@
-const AdminBiz = require('../../../../../../comm/biz/admin_biz.js');
-const pageHelper = require('../../../../../../helper/page_helper.js');
-const PublicBiz = require('../../../../../../comm/biz/public_biz.js');
-const cloudHelper = require('../../../../../../helper/cloud_helper.js');
-const validate = require('../../../../../../helper/validate.js');
-const AdminProductBiz = require('../../../../biz/admin_product_biz.js');
-const ProductBiz = require('../../../../biz/product_biz.js'); 
-const projectSetting = require('../../../../public/project_setting.js');
-
+// projects/activitystreet/pages/admin/product/add/admin_product_add.js
 Page({
 
 	/**
@@ -19,79 +11,56 @@ Page({
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
-	onLoad: async function (options) {
-		if (!AdminBiz.isAdmin(this)) return;
+	onLoad(options) {
 
-		wx.setNavigationBarTitle({
-			title: projectSetting.PRODUCT_NAME + '-添加',
-		});
-
-		this.setData(AdminProductBiz.initFormData());
-		this.setData({
-			isLoad: true
-		});
 	},
-
 
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
-	onReady: function () { },
+	onReady() {
+
+	},
 
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
-	onShow: function () { },
+	onShow() {
+
+	},
 
 	/**
 	 * 生命周期函数--监听页面隐藏
 	 */
-	onHide: function () { },
+	onHide() {
+
+	},
 
 	/**
 	 * 生命周期函数--监听页面卸载
 	 */
-	onUnload: function () { },
-
-	url: function (e) {
-		pageHelper.url(e, this);
-	},
-
-	bindFormSubmit: async function () {
-		if (!AdminBiz.isAdmin(this)) return;
-
-		let data = this.data;
-		data = validate.check(data, AdminProductBiz.CHECK_FORM, this);
-		if (!data) return;
-
-		let forms = this.selectComponent("#cmpt-form").getForms(true);
-		if (!forms) return;
-		data.forms = forms;
-
-		data.cateName = ProductBiz.getCateName(data.cateId);
-
-		try {
-
-			// 创建
-			let result = await cloudHelper.callCloudSumbit('admin/product_insert', data);
-			let productId = result.data.id;
-
-			// 图片
-			await cloudHelper.transFormsTempPics(forms, 'product/', productId, 'admin/product_update_forms');
-
-
-			let callback = async function () {
-				PublicBiz.removeCacheList('admin-product-list');
-				PublicBiz.removeCacheList('product-list');
-				wx.navigateBack();
-
-			}
-			pageHelper.showSuccToast('添加成功', 2000, callback);
-
-		} catch (err) {
-			console.log(err);
-		}
+	onUnload() {
 
 	},
 
+	/**
+	 * 页面相关事件处理函数--监听用户下拉动作
+	 */
+	onPullDownRefresh() {
+
+	},
+
+	/**
+	 * 页面上拉触底事件的处理函数
+	 */
+	onReachBottom() {
+
+	},
+
+	/**
+	 * 用户点击右上角分享
+	 */
+	onShareAppMessage() {
+
+	}
 })

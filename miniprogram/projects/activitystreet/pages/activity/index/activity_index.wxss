@@ -12,7 +12,8 @@
 }
 
 .list .item {
-	width: 100%;
+  width: 100%;
+  box-shadow: 2px 2px 1px 0px rgba(68, 68, 68, 0.7);
 	display: flex;
 	background-color: #fff;
 	padding: 20rpx 20rpx;

@@ -1,84 +1,66 @@
-const AdminBiz = require('../../../../../comm/biz/admin_biz.js');
-const pageHelper = require('../../../../../helper/page_helper.js');
-
+// projects/activitystreet/pages/admin/content/admin_content.js
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		formContent: [{
-			type: 'text',
-			val: '',
-		}]
+
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
-	onLoad: async function (options) {
-		if (!AdminBiz.isAdmin(this)) return;
+	onLoad(options) {
 
-		let parent = pageHelper.getPrevPage(2);
-		if (!parent) return;
-
-		let formContent = parent.data.formContent;
-		if (formContent && formContent.length > 0)
-			this.setData({
-				formContent
-			});
 	},
-
-
-
 
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
-	onReady: function () {},
+	onReady() {
+
+	},
 
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
-	onShow: function () {},
+	onShow() {
+
+	},
 
 	/**
 	 * 生命周期函数--监听页面隐藏
 	 */
-	onHide: function () {},
+	onHide() {
+
+	},
 
 	/**
 	 * 生命周期函数--监听页面卸载
 	 */
-	onUnload: function () {},
+	onUnload() {
+
+	},
 
 	/**
 	 * 页面相关事件处理函数--监听用户下拉动作
 	 */
-	onPullDownRefresh: async function () {
+	onPullDownRefresh() {
 
 	},
 
-	model: function (e) {
-		pageHelper.model(this, e);
+	/**
+	 * 页面上拉触底事件的处理函数
+	 */
+	onReachBottom() {
+
 	},
 
-	url: function (e) {
-		pageHelper.url(e, this);
-	},
+	/**
+	 * 用户点击右上角分享
+	 */
+	onShareAppMessage() {
 
-	bindSaveTap: function (e) {
-		let formContent = this.selectComponent("#contentEditor").getNodeList();
-
-		let parent = pageHelper.getPrevPage(2);
-		if (!parent) return;
-
-		parent.setData({
-			formContent
-		}, () => {
-			parent._setContentDesc();
-		});
-
-		wx.navigateBack();
 	}
 })

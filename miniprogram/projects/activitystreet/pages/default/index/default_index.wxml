@@ -15,8 +15,8 @@
 		<view wx:if="{{!newList||!hotList}}" class="margin-top load loading text-l load-project"></view>
 
 		<view class="list" wx:if="{{cur=='new'}}">
-			<view wx:for="{{newList}}" wx:key="key" class="item" bindtap="url" data-url="../../activity/detail/activity_detail?id={{item._id}}" style="width: 664rpx; height: 358rpx; display: flex; box-sizing: border-box; left: -1rpx; top: 181rpx; position: relative">
-				<image style="width: 108rpx; height: 122rpx; display: block; box-sizing: border-box; left: 0rpx; top: 20rpx; position: relative" class="left loading shadow-project" mode="aspectFill" lazy-load="{{true}}" src="{{item.ACTIVITY_OBJ.cover[0]}}" />
+			<view wx:for="{{newList}}" wx:key="key" class="item" bindtap="url" data-url="../../activity/detail/activity_detail?id={{item._id}}" style="width: 687rpx; height: 358rpx; display: flex; box-sizing: border-box; left: -1rpx; top: 174rpx; position: relative">
+        <image style="width: 74rpx; height: 72rpx; display: block; box-sizing: border-box; left: 0rpx; top: 20rpx; position: relative" class="left loading shadow-project" mode="aspectFill" lazy-load="{{true}}" src="{{item.ACTIVITY_OBJ.cover[0]}}" />
 				<view class="right">
 					<view class="top">
 						<view class="title content-cut-one">{{item.ACTIVITY_TITLE}}</view>
@@ -25,8 +25,7 @@
 					<view class="line">
 						<view class="users">
 							<view class="pic-group">
-								<image wx:for="{{item.ACTIVITY_USER_LIST}}" wx:for-index="idx" wx:key="key" wx:if="{{idx<3}}" wx:for-item="itm" class="pic round loading" mode="aspectFill" lazy-load="{{true}}" src="{{itm.USER_PIC}}" />
-							</view>
+									<image wx:for="{{item.ACTIVITY_USER_LIST}}" wx:for-index="idx" wx:key="key"  wx:if="{{idx<3}}" wx:for-item="itm" class="pic round loading" mode="aspectFill" lazy-load="{{true}}" src="{{itm.USER_PIC}}" />							</view>
 							<text wx:if="{{item.ACTIVITY_JOIN_CNT}}" class="num">+{{item.ACTIVITY_JOIN_CNT}}人报名</text>
 							<text wx:else class="num">{{item.ACTIVITY_JOIN_CNT}}人报名</text>
 						</view>

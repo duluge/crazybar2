@@ -3,11 +3,11 @@
 	<cmpt-comm-list type="activity-list" _params="{{_params}}" search="{{search||''}}" _menus="{{sortMenus}}" _items="{{sortItems}}" sortMenusDefaultIndex="0" route="activity/list" topBottom="120" isTotalMenu="{{true}}" placeholder="搜索" bind:list="bindCommListCmpt" style="position: relative; left: 0rpx; top: 4rpx">
 
 		<view class="main">
-			<view class="list">
-				<swiper indicator-dots="{{true}}" autoplay="{{false}}" interval="{{5000}}" duration="{{1000}}" bindchange="handleChange">
+			<view class="list" style="width: 750rpx; height: 1070rpx; display: flex; box-sizing: border-box">
+
 				<block wx:for="{{dataList.list}}" wx:key="key">
-				        <swiper-item>
-				        <view class="item card-project shadow-project" bindtap="url" data-url="../detail/activity_detail?id={{item._id}}" style="width: 712rpx; height: 295rpx; display: flex; box-sizing: border-box; left: 2rpx; top: 0rpx; position: relative">
+				      
+				        <view class="item card-project shadow-project" bindtap="url" data-url="../detail/activity_detail?id={{item._id}}" style="width: 681rpx; height: 474rpx; display: flex; box-sizing: border-box; left: 16rpx; top: 0rpx; position: relative">
 				        <image style="width: 74rpx; height: 72rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx" class="left loading shadow-project" mode="aspectFill" lazy-load="{{true}}" src="{{item.ACTIVITY_OBJ.cover[0]}}" />
 						<view class="right">
 						<view class="top">
@@ -29,10 +29,8 @@
 						</view>
 					</view>
 				</view>
-				</swiper-item>
 
 				      </block>
-				    </swiper>
 			</view>
 		</view>
 

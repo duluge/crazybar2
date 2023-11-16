@@ -1,88 +1,66 @@
-const AdminBiz = require('../../../../../../comm/biz/admin_biz.js');
-const PublicBiz = require('../../../../../../comm/biz/public_biz.js');
-const pageHelper = require('../../../../../../helper/page_helper.js');
-const cloudHelper = require('../../../../../../helper/cloud_helper.js');
-const validate = require('../../../../../../helper/validate.js');
-
+// projects/activitystreet/pages/admin/mgr/add/admin_mgr_add.js
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		formName: '',
-		formDesc: '',
-		formPhone: '',
-		formPassword: '',
+
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
-	onLoad: function (options) {
-		if (!AdminBiz.isAdmin(this, true)) return;
+	onLoad(options) {
+
 	},
 
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
-	onReady: function () {
+	onReady() {
 
 	},
 
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
-	onShow: function () {
+	onShow() {
 
 	},
 
 	/**
 	 * 生命周期函数--监听页面隐藏
 	 */
-	onHide: function () {
+	onHide() {
 
 	},
 
 	/**
 	 * 生命周期函数--监听页面卸载
 	 */
-	onUnload: function () {
+	onUnload() {
 
 	},
 
-
-
-	/** 
-	 * 数据提交
+	/**
+	 * 页面相关事件处理函数--监听用户下拉动作
 	 */
-	bindFormSubmit: async function () {
-		if (!AdminBiz.isAdmin(this, true)) return;
-
-		let data = this.data;
-
-		// 数据校验 
-		data = validate.check(data, AdminBiz.CHECK_FORM_MGR_ADD, this);
-		if (!data) return;
-
-		try {
-			let adminId = this.data.id;
-			data.id = adminId;
-
-			await cloudHelper.callCloudSumbit('admin/mgr_insert', data).then(res => {
-
-				let callback = async function () {
-					PublicBiz.removeCacheList('admin-mgr');
-					wx.navigateBack();
-
-				}
-				pageHelper.showSuccToast('添加成功', 1500, callback);
-			});
-
-
-		} catch (err) {
-			console.log(err);
-		}
+	onPullDownRefresh() {
 
 	},
+
+	/**
+	 * 页面上拉触底事件的处理函数
+	 */
+	onReachBottom() {
+
+	},
+
+	/**
+	 * 用户点击右上角分享
+	 */
+	onShareAppMessage() {
+
+	}
 })
