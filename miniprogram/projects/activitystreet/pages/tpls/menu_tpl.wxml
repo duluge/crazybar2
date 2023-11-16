@@ -13,20 +13,14 @@
 
 		<view class="tab-bar-item" bindtap="url" data-type="relaunch" data-url="/projects/activitystreet/pages/news/index/news_index">
 			<image class="tab-icon" src="/projects/activitystreet/images/tabbar/product{{curMenu=='news_index'?'_cur':''}}.png"></image>
-			<view class="tab-text {{curMenu=='news_index'?'menu-project':''}}">通知</view>
+			<view class="tab-text {{curMenu=='news_index'?'menu-project':''}}">动态</view>
 		</view>
 
 		<view wx:if="{{skin.cate2!==false}}" class="tab-bar-item" bindtap="url" data-type="relaunch" data-url="/projects/activitystreet/pages/activity/index/activity_index">
 			<image class="tab-icon" src="/projects/activitystreet/images/tabbar/enroll{{curMenu=='activity_index'?'_cur':''}}.png"></image>
 			<view class="tab-text {{curMenu=='activity_index'?'menu-project':''}}">活动</view>
-		</view>
-
-		<view class="tab-bar-item" bindtap="url" data-type="relaunch" data-url="/projects/activitystreet/pages/enroll/index/enroll_index">
-			<image class="tab-icon" src="/projects/activitystreet/images/tabbar/checkin{{curMenu=='enroll_index'?'_cur':''}}.png"></image>
-			<view class="tab-text {{curMenu=='enroll_index'?'menu-project':''}}">动态</view>
-		</view>
-		 
-	 
+		</view> 
+	
 		<view class="tab-bar-item" bindtap="url" data-type="relaunch" data-url="/projects/activitystreet/pages/my/index/my_index">
 			<image class="tab-icon" src="/projects/activitystreet/images/tabbar/my{{curMenu=='my_index'?'_cur':''}}.png"></image>
 			<view class="tab-text {{curMenu=='my_index'?'menu-project':''}}">我的</view>

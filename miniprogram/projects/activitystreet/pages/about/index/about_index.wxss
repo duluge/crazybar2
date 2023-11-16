@@ -1,3 +1,2 @@
-@import "../../../../../style/public/detail.wxss"; 
-@import "../../../style/skin.wxss"; 
-  
+@import "../../../../../style/public/detail.wxss";
+@import "../../../style/skin.wxss";

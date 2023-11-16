@@ -14,9 +14,17 @@ Page({
 		sortMenus: [],
 		sortItems: [],
 
-		isShowCate: projectSetting.ACTIVITY_CATE.length > 1
+		isShowCate: projectSetting.ACTIVITY_CATE.length > 1,
+		currentTab: 0
 	},
-
+		
+	handleChange(e) {
+	    this.setData({
+	      current: e.detail.current,
+	    });
+	    // 切换到对应的页面
+	  },
+	  
 	/**
 		 * 生命周期函数--监听页面加载
 		 */

@@ -42,7 +42,6 @@
 	<view>
 		<view class="tab-line1">
 			<view bindtap="bindCurTap" data-cur="new" class="item {{cur=='new'?'cur':''}}">最新活动</view>
-			<view bindtap="bindCurTap" data-cur="hot" class="item {{cur=='hot'?'cur':''}}">最热活动</view>
 		</view>
 
 		<!-- List Begin -->
