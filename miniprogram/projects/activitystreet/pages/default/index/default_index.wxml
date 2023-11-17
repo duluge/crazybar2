@@ -15,7 +15,7 @@
 		<view wx:if="{{!newList||!hotList}}" class="margin-top load loading text-l load-project"></view>
 
 		<view class="list" wx:if="{{cur=='new'}}">
-			<view wx:for="{{newList}}" wx:key="key" class="item" bindtap="url" data-url="../../activity/detail/activity_detail?id={{item._id}}" style="width: 687rpx; height: 358rpx; display: flex; box-sizing: border-box; left: -1rpx; top: 174rpx; position: relative">
+			<view wx:for="{{newList}}" wx:key="key" class="item" bindtap="url" data-url="../../activity/detail/activity_detail?id={{item._id}}" style="width: 664rpx; height: 418rpx; display: flex; box-sizing: border-box; left: -2rpx; top: 174rpx; position: relative">
         <image style="width: 74rpx; height: 72rpx; display: block; box-sizing: border-box; left: 0rpx; top: 20rpx; position: relative" class="left loading shadow-project" mode="aspectFill" lazy-load="{{true}}" src="{{item.ACTIVITY_OBJ.cover[0]}}" />
 				<view class="right">
 					<view class="top">
